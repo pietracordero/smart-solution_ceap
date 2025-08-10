@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Portal CEAP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #4b3f8f, #3f3672);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      width: 400px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+      position: relative;
+    }
+    .card img {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 20px;
+      display: block;
+    }
+    .card h2 {
+      text-align: center;
+      color: #4b3f8f;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .card p {
+      text-align: center;
+      color: #6b7280;
+      margin-bottom: 24px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    .form-check {
+      display: flex;
+      align-items: center;
+      margin: 16px 0;
+    }
+    .form-check input {
+      margin-right: 8px;
+    }
+    .btn {
+      background-color: #6c4bc1;
+      color: white;
+      border: none;
+      padding: 14px;
+      width: 100%;  
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .btn:hover {
+      background-color: #5a3ea1;
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" alt="Ícone de cadeado">
+    <h2>Bem-vindo ao Portal CEAP</h2>
+    <p>Entre na sua conta para continuar</p>
+
+    <form onsubmit="return validarLogin()">
+      <div class="form-group">
+        <label for="email">Usuário</label>
+        <input type="text" id="email" placeholder="Digite seu nome" required>
+      </div>
+      <div class="form-group">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" placeholder="********" required>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" id="lembrar">
+        <label for="lembrar">Lembrar de mim</label>
+      </div>
+      <button class="btn" type="submit">Entrar</button>
+    </form>
+  </div>
+
+  <script>
+    function validarLogin() {
+      const usuario = document.getElementById("email").value.trim().toLowerCase();
+      const senha = document.getElementById("senha").value.trim();
+      const permitidos = ["a","pietra", "pedro", "duda", "rayssa","ray"];
+
+      if (permitidos.includes(usuario) && senha === "ceap","a") {
+        window.location.href = "home.html";
+      } else {
+        alert("Usuário ou senha inválidos.");
+      }
+
+      return false;
+    }
+  </script>
+</body>
+</html>
+

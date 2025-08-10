@@ -1,0 +1,1136 @@
+  <!DOCTYPE html>
+  <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposta Comercial - CEAP</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #f8f9fc;
+        color: #1f2937;
+      }
+      header {
+        background: linear-gradient(to right, #5a3df4, #7d2ae8);
+        color: white;
+        padding: 1.5rem 2rem;
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+        font-size: 50px;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 1.5rem;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 1rem;
+      }
+      .quem-somos {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        padding: 2rem;
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+      }
+      .quem-somos-texto {
+        flex: 1;
+      }
+      .quem-somos-texto h2 {
+        color: #4f46e5;
+      }
+      .tags {
+        margin-top: 1rem;
+      }
+      .tag {
+        display: inline-block;
+        background-color: #e0e7ff;
+        color: #3730a3;
+        border-radius: 20px;
+        padding: 0.4rem 1rem;
+        margin-right: 0.5rem;
+        font-size: 0.875rem;
+      }
+      
+  .upload-box {
+    width: 340px;
+    height: auto;
+    border: none;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .tags-coloridas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2rem;
+    justify-content: center;
+  }
+
+  .tags-coloridas span {
+    font-weight: bold;
+    padding: 0.7rem 1.4rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    color: white;
+  }
+
+  .tag-verde { background-color: #10b981; }
+  .tag-amarela { background-color: #facc15; color: #1f2937; }
+  .tag-azul { background-color: #3b82f6; }
+  .tag-rosa { background-color: #ec4899; }
+  .tag-lilas { background-color: #a855f7; }
+  .tag-laranja { background-color: #f97316; }
+    
+  .proposta-valor {
+    margin-top: 3rem;
+    text-align: center;
+  }
+
+  .proposta-valor h2 {
+    color: #4f46e5;
+    margin-bottom: 2rem;
+    font-size: 1.75rem;
+  }
+
+  .cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    border-top: 4px solid transparent;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+  .card:nth-child(1) { border-top-color: #6366f1; }
+  .card:nth-child(2) { border-top-color: #a78bfa; }
+  .card:nth-child(3) { border-top-color: #60a5fa; }
+
+  .card-img {
+    width: 100%;
+    max-width: 360px;
+    height: 220px;
+    margin-bottom: 1.2rem;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-img img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  .impacto-social {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 1200px;
+      }
+
+      .impacto-social h2 {
+        color: #4f46e5;
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+      }
+
+      .impacto-cards {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+      }
+
+      .impacto-card {
+        background-color: white;
+        border-radius: 12px;
+        padding: 2rem;
+        width: 300px;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+        text-align: center;
+        border-top: 3px solid transparent;
+        transition: transform 0.3s ease;
+      }
+
+      .impacto-card:hover {
+        transform: translateY(-4px);
+      }
+
+      .impacto-card:nth-child(1) {
+        border-top-color: #818cf8;
+      }
+
+      .impacto-card:nth-child(2) {
+        border-top-color: #c084fc;
+      }
+
+      .impacto-card:nth-child(3) {
+        border-top-color: #60a5fa;
+      }
+
+      .impacto-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background-color: #e0e7ff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 1rem;
+        font-size: 24px;
+        color: #4f46e5;
+      }
+
+      .impacto-card h3 {
+        font-size: 1.5rem;
+        margin: 0.5rem 0;
+        font-weight: bold;
+      }
+
+      .impacto-card p {
+        font-size: 0.95rem;
+        color: #374151;
+      }
+
+      .impacto-numeros {
+        background: linear-gradient(135deg, #5b21b6, #7c3aed, #8b5cf6);
+        color: white;
+        text-align: center;
+        padding: 4rem 1rem;
+      }
+
+      .impacto-numeros h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+      }
+
+      .impacto-numeros p.subtitulo {
+        font-size: 1.1rem;
+        margin-bottom: 3rem;
+      }
+
+      .cards-impacto {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+      }
+
+      .card-numero {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 2rem;
+        border-radius: 16px;
+        min-width: 160px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .card-numero:hover {
+        transform: translateY(-5px);
+      }
+
+      .card-numero h3 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 0 0 0.5rem;
+      }
+
+      .card-numero p {
+        margin: 0;
+        font-size: 0.95rem;
+        color: #e0e7ff;
+      }
+      .secao-educacao {
+        position: relative;
+        background-color: #f97316;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        padding-bottom: 5rem;
+      }
+
+      .coluna-texto {
+        flex: 1;
+        padding: 3rem;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 2;
+      }
+
+      .coluna-texto h2 {
+        font-size: 2.5rem;
+        font-weight: 300;
+        margin-bottom: 1rem;
+      }
+      
+      .coluna-texto h2 strong {
+        display: block;
+        font-weight: 700;
+      }
+
+      .coluna-texto p {
+        margin: 1rem 0;
+        line-height: 1.6;
+        font-size: 1rem;
+      }
+
+      .coluna-texto p strong {
+        font-weight: 700;
+      }
+
+      .coluna-imagem {
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+        border-bottom-left-radius: 64px;
+      }
+
+      .coluna-imagem img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        border-bottom-left-radius: 64px;
+        transform: translateY(20%);
+      }
+
+      .bloco-estatistica {
+        position: absolute;
+        bottom: -45px;
+        left: 3rem;
+        background: rgb(255, 255, 255);
+        color: #000000;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        display: inline-flex;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        font-size: 15px;
+        font-weight: bold;
+        gap: 1rem;
+        max-width: 800px;
+        z-index: 3;
+      }
+
+      .bloco-estatistica img {
+        width: 32px;
+        height: 32px;
+      }
+
+      .bloco-estatistica .destaque {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-right: 0.5rem;
+      }
+
+    
+
+    
+
+      @media (max-width: 768px) {
+        .secao-educacao {
+          flex-direction: column;
+          padding-bottom: 7rem;
+        }
+
+        .coluna-imagem img {
+          transform: none;
+          border-radius: 0;
+        }
+
+        .bloco-estatistica {
+          position: static;
+          margin-top: 2rem;
+        }
+
+        .mensagem-final {
+          text-align: center;
+        }
+      }
+
+      .alunos-section {
+        background: linear-gradient(135deg, #22c55e, #16a34a);
+        color: white;
+        padding: 4rem 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .alunos-texto {
+        flex: 1;
+        max-width: 550px;
+      }
+
+      .alunos-texto h2 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .alunos-texto h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        margin: 0 0 1rem;
+      }
+
+      .alunos-texto p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+      }
+
+      .perfil-box {
+        background: linear-gradient(to right, #d1fae5, #f0fdf4);
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        color: #1f2937;
+      }
+
+      .perfil-box h3 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+
+      .balao {
+        display: inline-block;
+        padding: 0.6rem 1rem;
+        border-radius: 20px;
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: white;
+        margin: 0.25rem 0.25rem 0 0;
+      }
+
+
+
+
+      .balao.laranja { background-color: #f97316; }
+          .balao.azul {
+    background-color: #3b82f6;
+    color: white; /* garante visibilidade */
+  }
+      .balao.rosa { background-color: #ec4899; }
+
+      .alunos-img {
+        flex: 1;
+        max-width: 400px;
+      }
+
+      .alunos-img img {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      @media (max-width: 768px) {
+        .alunos-section {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .alunos-texto, .alunos-img {
+          max-width: 100%;
+        }
+      }
+      .projetos, .depoimentos, .estrutura {
+        margin-top: 4rem;
+      }
+      .projetos h2, .depoimentos h2, .estrutura h2 {
+        text-align: center;
+        color: #4f46e5;
+        margin-bottom: 2rem;
+      }
+      .projetos-grid, .estrutura-grid {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      .projeto, .estrutura-box {
+        background: white;
+        border-radius: 12px;
+        flex: 1;
+        min-width: 300px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      }
+      .projeto-foto, .estrutura-foto {
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px dashed #d1d5db;
+        border-radius: 12px;
+        color: #9ca3af;
+        text-align: center;
+      }
+      .projeto-info {
+        padding: 1rem;
+      }
+      .projeto-info h3 {
+        margin: 0;
+        color: #4f46e5;
+      }
+      .badge {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: 0.25rem 0.75rem;
+        background: #d1fae5;
+        color: #065f46;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: bold;
+      }
+      .badge.new {
+        background: #ede9fe;
+        color: #5b21b6;
+      }
+      .badge-right {
+        float: right;
+        color: #6366f1;
+      }
+  .depoimentos {
+    margin-top: 4rem;
+    text-align: center;
+  }
+
+  .depoimentos h2 {
+    color: #4f46e5;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .depoimentos-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    border: 2px solid #a78bfa;
+    border-radius: 16px;
+    padding: 2.5rem;
+    background-color: #f9f5ff;
+    justify-content: center;
+  }
+
+  .depoimento {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    transition: transform 0.3s ease;
+  }
+
+  .depoimento:hover {
+    transform: translateY(-4px);
+  }
+
+  .depoimento-icon {
+    font-size: 3rem;
+    color: #a855f7;
+    margin-bottom: 1rem;
+  }
+
+  .depoimento-texto {
+    font-size: 1rem;
+    color: #1f2937;
+  }
+
+  .depoimento-frase {
+    font-style: italic;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+
+  .depoimento-texto strong {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #111827;
+  }
+
+  .depoimento-texto span {
+    font-size: 0.9rem;
+    color: #6b7280;
+  }
+
+  .beneficios-section {
+        padding: 2rem;
+        background-color: #f9fafb;
+        text-align: center;
+      }
+      .beneficios-section h2 {
+        color: #5a3df4;
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+      }
+      .beneficios-container {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+      }
+      .beneficio-card {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        padding: 2rem;
+        width: 300px;
+        text-align: center;
+      }
+      .beneficio-icon {
+        width: 48px;
+        height: 48px;
+        margin: 0 auto 1rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+      }
+      .verde { background-color: #d1fae5; color: #10b981; }
+      .azul { background-color: #dbeafe; color: #3b82f6; }
+      .amarelo { background-color: #fef9c3; color: #f59e0b; }
+      .beneficio-card h3 {
+        font-size: 1.1rem;
+        margin-top: 0.5rem;
+      }
+      .beneficio-card p {
+        font-size: 0.95rem;
+        color: #4b5563;
+      }
+
+      .cta-section {
+        background: linear-gradient(to right, #7c3aed, #8b5cf6);
+        color: white;
+        padding: 3rem 1rem;
+        text-align: center;
+        border-radius: 12px;
+        margin: 3rem auto;
+        max-width: 1000px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+      }
+      .cta-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+      }
+      .cta-section p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+      }
+      .cta-section button {
+        background-color: white;
+        color: #6d28d9;
+        border: none;
+        padding: 0.75rem 2rem;
+        font-size: 1rem;
+        border-radius: 9999px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .cta-section button:hover {
+        background-color: #f3e8ff;
+      }
+      .contato-section {
+        background-color: white;
+        padding: 3rem 1rem;
+        border-radius: 12px;
+        max-width: 1000px;
+        margin: 2rem auto;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        text-align: center;
+      }
+      .contato-section h2 {
+        color: #4f46e5;
+        margin-bottom: 2rem;
+      }
+      .contato-section p {
+        font-size: 0.95rem;
+        color: #4b5563;
+      }
+      .btn-contato {
+        background-color: #4f46e5;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+        margin: 1rem 0;
+      }
+      .btn-contato:hover {
+        background-color: #4338ca;
+      }
+
+      .estrutura-box {
+  flex: 1 1 32%;
+  max-width: 32%;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.estrutura-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .estrutura-box {
+    max-width: 100%;
+    aspect-ratio: auto;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+
+    <header>
+      <div><strong>CEAP</strong></div>
+      <div>
+        <h1>Proposta Comercial <span id="nome-parceiro"></span><br><small style="font-weight: normal; font-size: 0.9rem;">Transformando vidas através da educação</small></h1>
+      </div>
+    </header>
+
+  <div class="container">
+      <section class="quem-somos">
+        <div class="quem-somos-texto">
+          <h2>Quem Somos</h2>
+          <p>
+            O CEAP é uma instituição de ensino sem fins lucrativos dedicada a proporcionar
+            educação de qualidade para crianças e jovens em situação de vulnerabilidade
+            social. Nossa missão é transformar vidas através do conhecimento e valores
+            humanos.
+          </p>
+        </div>
+        <div class="upload-box">
+          <img src="img1.png" alt="Melhores ONGs 2024" style="max-width:100%; height:auto; border-radius: 12px;">
+        </div>
+      </section>
+    
+      <div class="tags tags-coloridas">
+        <span class="tag-verde">Educação de Qualidade</span>
+        <span class="tag-amarela">Oportunidades para Todos</span>
+        <span class="tag-azul">Desenvolvimento Humano</span>
+        <span class="tag-rosa">Cuidado com o Futuro</span>
+        <span class="tag-lilas">Transformação Social</span>
+        
+      </div>
+    </div>
+
+  <section class="proposta-valor"> 
+    <h2>Nossa Proposta de Valor</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="card-img">
+          <img src="img2.png" alt="Educação Integral">
+        </div>
+        <h3>Educação Integral</h3>
+        <p>Formação acadêmica e desenvolvimento de habilidades socioemocionais para uma educação completa.</p>
+      </div>
+      <div class="card">
+        <div class="card-img">
+          <img src="img3.png" alt="Inclusão Social">
+        </div>
+        <h3>Inclusão Social</h3>
+        <p>Oportunidades iguais para todos, independentemente da condição socioeconômica.</p>
+      </div>
+      <div class="card">
+        <div class="card-img">
+          <img src="img4.png" alt="Valores Éticos">
+        </div>
+        <h3>Valores Éticos</h3>
+        <p>Formação baseada em princípios éticos e morais para o desenvolvimento de cidadãos conscientes.</p>
+      </div>
+    </div>
+  </section>
+
+
+    <section class="impacto-social">
+      <h2>Nosso Impacto Social</h2>
+      <div class="impacto-cards">
+        <div class="impacto-card">
+          <div class="impacto-icon">📖</div>
+          <h3>500+</h3>
+          <p>Alunos atendidos anualmente com bolsas de estudo integrais</p>
+        </div>
+        <div class="impacto-card">
+          <div class="impacto-icon">👥</div>
+          <h3>95%</h3>
+          <p>Taxa de aprovação dos nossos alunos em universidades públicas e privadas</p>
+        </div>
+        <div class="impacto-card">
+          <div class="impacto-icon">🛡️</div>
+          <h3>15.000+</h3>
+          <p>Vidas transformadas ao longo de nossa história</p>
+        </div>
+      </div>
+    </section>
+
+      <section class="impacto-numeros">
+      <h2>Nosso Impacto em Números</h2>
+      <p class="subtitulo">Transformando a educação e criando oportunidades para um futuro melhor</p>
+      <div class="cards-impacto">
+        <div class="card-numero">
+          <h3>500+</h3>
+          <p>Alunos atendidos anualmente</p>
+        </div>
+        <div class="card-numero">
+          <h3>95%</h3>
+          <p>Taxa de aprovação</p>
+        </div>
+        <div class="card-numero">
+          <h3>15k+</h3>
+          <p>Vidas transformadas</p>
+        </div>
+        <div class="card-numero">
+          <h3>38</h3>
+          <p>Anos de história</p>
+        </div>
+      </div>
+    </section>
+
+  <section class="secao-educacao">
+      <div class="coluna-texto">
+        <h2>EDUCAÇÃO <strong>PERSONALIZADA</strong></h2>
+        <p>A principal ferramenta desse pilar é a <strong>preceptoria</strong>.</p>
+        <p>Todo aluno do CEAP <strong>possui um tutor responsável que realiza conversas individuais mensalmente</strong> para tratar sobre a relação com a família, valores éticos e desenvolvimento escolar do beneficiado.</p>
+      </div>
+
+      <div class="coluna-imagem">
+        <img src="img3.png" alt="Aluno com tutor">
+      </div>
+
+      <div class="bloco-estatistica">
+        <img src="https://img.icons8.com/ios-filled/50/f97316/conference-call.png" alt="Ícone pessoas">
+        <div>
+          <span class="destaque">+4.000</span><br>
+          atendimentos personalizados<br>
+          realizados ao longo de <strong>2023</strong>.
+        </div>
+      <img src="https://img.icons8.com/ios-filled/50/f97316/conference-call.png" alt="Ícone pessoas">
+        <div>
+          <span class="destaque">Envolvimento familiar</span><br>
+          participação ativa dos pais.<br>
+          <strong></strong>
+        </div>
+        <img src="https://img.icons8.com/ios-filled/50/f97316/conference-call.png" alt="Ícone pessoas">
+        <div>
+          <span class="destaque">Envolvimento familiar</span><br>
+          participação ativa dos pais.<br>
+          <strong></strong>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+  <section class="alunos-section">
+      <div class="alunos-texto">
+        <h2>Alunos Atendidos</h2>
+        <h1>500+</h1>
+        <p>Anualmente, mais de 500 alunos recebem bolsas de estudo integrais no CEAP, garantindo acesso à educação de qualidade independentemente de sua condição socioeconômica.</p>
+
+        <div class="perfil-box">
+          <h3>Perfil dos Alunos</h3>
+          <span class="balao laranja">100% de famílias de baixa renda</span>
+          <span class="balao azul">70% são primeiros da família a concluir o ensino médio</span>
+          <span class="balao rosa">85% de comunidades periféricas</span>
+        </div>
+      </div>
+
+      <div class="alunos-img">
+        <img src="img2.png" alt="Imagem dos alunos atendidos">
+      </div>
+    </section>
+
+      <section class="projetos">
+        <h2>Nossos Projetos</h2>
+        <div class="projetos-grid">
+          <div class="projeto">
+            <div class="projeto-foto">Adicionar foto do projeto</div>
+            <div class="projeto-info">
+              <h3>Programa de Bolsas de Estudo</h3>
+              <p>Oferecemos bolsas de estudo integrais para estudantes de baixa renda, garantindo acesso à educação de qualidade.</p>
+              <div class="badge">Em andamento</div>
+              <div class="badge badge-right">100+ beneficiados</div>
+            </div>
+          </div>
+          <div class="projeto">
+            <div class="projeto-foto">Adicionar foto do projeto</div>
+            <div class="projeto-info">
+              <h3>Laboratório de Tecnologia</h3>
+              <p>Espaço equipado com computadores e recursos tecnológicos para desenvolvimento de habilidades digitais.</p>
+              <div class="badge new">Novo projeto</div>
+              <div class="badge badge-right">50+ alunos atendidos</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="depoimentos">
+    <h2>Depoimentos</h2>
+    <div class="depoimentos-box">
+      <div class="depoimento">
+        <div class="depoimento-icon">👤</div>
+        <div class="depoimento-texto">
+          <p class="depoimento-frase">"O CEAP mudou minha vida. Graças à bolsa de estudos, pude concluir meus estudos e hoje estou na faculdade."</p>
+          <strong>Maria Silva</strong>
+          <span>Ex-aluna, 22 anos</span>
+        </div>
+      </div>
+      <div class="depoimento">
+        <div class="depoimento-icon">👤</div>
+        <div class="depoimento-texto">
+          <p class="depoimento-frase">"Como pai, vejo o desenvolvimento do meu filho a cada dia. O CEAP não só ensina conteúdos, mas valores para a vida."</p>
+          <strong>João Pereira</strong>
+          <span>Pai de aluno</span>
+        </div>
+      </div>
+      <div class="depoimento">
+        <div class="depoimento-icon">👤</div>
+        <div class="depoimento-texto">
+          <p class="depoimento-frase">"Ser voluntária no CEAP me faz acreditar que estamos construindo um futuro mais justo. Aqui, todos têm oportunidade de crescer."</p>
+          <strong>Cláudia Nascimento</strong>
+          <span>Voluntária, 34 anos</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="resumo-proposta" class="container">
+  <!-- Conteúdo será preenchido pelo script -->
+</div>
+
+
+<section class="estrutura">
+  <h2>Nossa Estrutura</h2>
+  <div class="estrutura-grid" style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+    <div class="estrutura-box">
+      <img src="img5.png" alt="Vista aérea CEAP" class="estrutura-img">
+    </div>
+    <div class="estrutura-box">
+      <img src="img6.png" alt="Auditório CEAP" class="estrutura-img">
+    </div>
+    <div class="estrutura-box">
+      <img src="img8.png" alt="Prédio CEAP" class="estrutura-img">
+    </div>
+  </div>
+</section>
+
+
+
+      <section class="beneficios-section">
+      <h2>Benefícios para sua Empresa</h2>
+      <div class="beneficios-container">
+        <div class="beneficio-card">
+          <div class="beneficio-icon verde">✔️</div>
+          <h3>Responsabilidade Social</h3>
+          <p>Fortaleça a imagem da sua empresa como socialmente responsável, contribuindo diretamente para a educação de jovens em situação de vulnerabilidade.</p>
+        </div>
+        <div class="beneficio-card">
+          <div class="beneficio-icon azul">📊</div>
+          <h3>Visibilidade da Marca</h3>
+          <p>Sua marca será divulgada em todos os eventos, materiais institucionais e canais de comunicação do CEAP, alcançando milhares de pessoas.</p>
+        </div>
+        <div class="beneficio-card">
+          <div class="beneficio-icon amarelo">💰</div>
+          <h3>Incentivos Fiscais</h3>
+          <p>Possibilidade de dedução fiscal através de doações para projetos educacionais, conforme legislação vigente.</p>
+        </div>
+      </div>
+    </section>
+
+
+     <section class="proposta-valor">
+   
+   
+   
+    <div id="bloco-dinamico"></div>
+  </section>
+
+<section class="proposta-valor">
+
+    <div id="bloco-dinamico"></div>
+  </section>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const tipo = params.get("tipo");
+  const pagamento = params.get("pagamento");
+  const autoPDF = params.get("autoPDF") === "1";
+
+  let caminho = "";
+  if (tipo === "financeira" && pagamento === "avista") {
+    caminho = "propostaAVista.html";
+  } else if (tipo === "financeira" && pagamento === "parcelado") {
+    caminho = "propostaParcelada.html";
+  } else if (tipo === "serviço") {
+    caminho = "propostaParceria.html";
+  } else if (tipo === "ambos" && pagamento === "parcelado") {
+    caminho = "propostaAmbosParcelado.html";
+  } else if (tipo === "ambos" && pagamento === "avista") {
+    caminho = "propostaAmbosAvista.html";
+  }
+
+  function preencherCampos() {
+    const valor = params.get("valorAvista") || params.get("valorParcelado") || "";
+    const descricao = params.get("descricao") || "-";
+    const objetivo = params.get("objetivo") || "-";
+    const validade = params.get("validade") || "-";
+    const duracao = params.get("duracao") || "-";
+
+    const valorFormatado = valor ? `R$ ${parseFloat(valor).toLocaleString("pt-BR", { minimumFractionDigits: 2 })}` : "-";
+
+    function formatarDataBR(dataISO) {
+      if (!dataISO || !dataISO.includes("-")) return dataISO;
+      const [ano, mes, dia] = dataISO.split("-");
+      return `${dia}/${mes}/${ano}`;
+    }
+
+    const validadeFormatada = formatarDataBR(validade);
+
+    const setText = (id, texto) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = texto;
+    };
+
+    setText("valor", valorFormatado);
+    setText("descricao", descricao);
+    setText("descricaoInline", descricao);
+    setText("objetivo", objetivo);
+    setText("duracao", duracao);
+    setText("duracao-texto", duracao);
+    setText("duracao-info", duracao);
+    setText("validade", validadeFormatada);
+    setText("validade-texto", validadeFormatada);
+    setText("validade-info", validadeFormatada);
+    setText("validade-topo", validadeFormatada);
+    setText("valorTotal", valorFormatado);
+    setText("parcelas", gerarParcelamento());
+    setText("nome-parceiro", params.get("nome") || "");
+  }
+
+  function gerarParcelamento() {
+    const total = parseFloat(params.get("valorParcelado"));
+    const qtd = parseInt(params.get("parcelas"));
+    if (!isNaN(total) && !isNaN(qtd) && qtd > 0) {
+      const unit = (total / qtd).toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+      return `${qtd} parcelas de ${unit}`;
+    }
+    return "-";
+  }
+
+  if (caminho) {
+    fetch(caminho)
+      .then(res => res.text())
+      .then(html => {
+        const bloco = document.getElementById("bloco-dinamico");
+        const temp = document.createElement("div");
+        temp.innerHTML = html;
+        bloco.innerHTML = temp.innerHTML;
+        setTimeout(() => {
+          preencherCampos();
+          if (autoPDF) gerarPDF();
+        }, 1000);
+      })
+      .catch(err => {
+        document.getElementById("bloco-dinamico").innerHTML = "<p>Erro ao carregar o conteúdo da proposta.</p>";
+        console.error("Erro ao carregar proposta:", err);
+      });
+  }
+
+  function gerarPDF() {
+    const nome = params.get("nome") || "proposta";
+    const options = {
+      margin: 0.5,
+      filename: `Proposta_CEAP_${nome}.pdf`,
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+    };
+    html2pdf().set(options).from(document.body).save();
+  }
+</script>
+
+
+
+
+
+    
+
+    </div>
+
+
+
+    
+
+
+  <!-- <section class="cta-section">
+      <h2>Faça Parte Dessa Transformação!</h2>
+      <p>Sua empresa pode fazer a diferença na vida de dezenas de crianças e jovens. Junte-se a nós nessa missão de transformar vidas através da educação.</p>
+      <button>Aceitar Proposta</button>
+    </section>
+
+    <section class="contato-section">
+      <h2>Dúvidas?</h2>
+      <p>Estamos à disposição para esclarecer qualquer dúvida sobre nossa proposta de parceria financeira.</p>
+      <button class="btn-contato">Entrar em Contato</button>
+
+    </section> -->
+
+
+  </body>
+  </html>

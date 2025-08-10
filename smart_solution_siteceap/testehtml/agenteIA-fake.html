@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Assistente Virtual</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f1f5f9;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    .header {
+      background-color: #4338ca;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    .chatbox {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 16px;
+      overflow-y: auto;
+      background-color: #f9fafb;
+    }
+
+    .mensagem-inicial {
+      background-color: #e0e7ff;
+      padding: 16px;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      color: #1e3a8a;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    .mensagem {
+      max-width: 70%;
+      padding: 10px 16px;
+      border-radius: 18px;
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      word-wrap: break-word;
+    }
+
+    .usuario {
+      background-color: #dbeafe;
+      align-self: flex-end;
+      border-bottom-right-radius: 4px;
+    }
+
+    .bot {
+      background-color: #eef2ff;
+      align-self: flex-start;
+      border-bottom-left-radius: 4px;
+    }
+
+    .input-area {
+      display: flex;
+      padding: 16px;
+      background-color: #ffffff;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    #pergunta {
+      flex: 1;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      font-size: 1rem;
+      outline: none;
+      margin-right: 10px;
+    }
+
+    button {
+      background-color: #6366f1;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #4f46e5;
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">🤖 Assistente Virtual CEAP</div>
+
+  <div class="chatbox" id="chat">
+    <div id="mensagemInicial" class="mensagem-inicial">
+      Sei tudo sobre os dados dos investimentos das parcerias.<br><br>
+      <strong>Como posso te ajudar?</strong><br><br>
+      Exemplos de perguntas:
+      <ul style="text-align:left; margin: 10px auto 0; max-width: 400px;">
+        <li>Quais são as empresas parceiras?</li>
+        <li>Quanto foi investido em alimentação?</li>
+        <li>Relatório da Empresa A</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="input-area">
+    <input type="text" id="pergunta" placeholder="Digite sua pergunta..." />
+    <button onclick="responder()">Enviar</button>
+  </div>
+
+  <script>
+    const respostas = {
+      "quais são as empresas parceiras": "Atualmente, temos parceria com a Empresa A, Empresa B e outras organizações locais.",
+      "relatório da empresa a": "A Empresa A investiu R$ 150.000 em 2024, com foco em alimentação e infraestrutura.",
+      "quanto a empresa a investiu": "A Empresa A investiu R$ 150.000 no último ciclo.",
+      "quais projetos estão em andamento": "Atualmente, os projetos em andamento são: CEAP Nutrição, Infraestrutura Escolar e Programa Jovem Futuro.",
+      "quanto foi investido em alimentação": "O investimento total em alimentação foi de R$ 80.000.",
+      "quanto foi investido em reformas": "O investimento em reformas e infraestrutura soma R$ 120.000.",
+      "oi": "Olá! Como posso ajudar você com os relatórios de impacto?",
+      "ola": "Seja bem-vindo! Deseja saber sobre alguma empresa ou projeto?",
+      "olá": "Oi! Pergunte sobre empresas parceiras, investimentos ou projetos em andamento.",
+      "opa": "Fala aí! Estou pronto para responder sobre os dados do CEAP 😄",
+      "como vai o investimento da empresa b": "Foi utilizado R$100.000,00 (50%) do valor total aplicado. sendo aplicado na construção de 2 novas salas de aula. Até o momento, ainda está disponível R$100.000,00 (50%) para novas melhorias. O que mais você precisa saber sobre esse investimento?"
+
+    };
+
+    let mensagemInicialRemovida = false;
+
+    function responder() {
+      const input = document.getElementById("pergunta");
+      const pergunta = input.value.toLowerCase().trim();
+      if (!pergunta) return;
+
+      if (!mensagemInicialRemovida) {
+        const inicial = document.getElementById("mensagemInicial");
+        if (inicial) inicial.remove();
+        mensagemInicialRemovida = true;
+      }
+
+      adicionarMensagem(pergunta, 'usuario');
+
+      const chave = Object.keys(respostas).find(key => pergunta.includes(key));
+      const resposta = chave ? respostas[chave] : "Desculpe, ainda não tenho uma resposta para essa pergunta.";
+
+      setTimeout(() => {
+        adicionarMensagem(resposta, 'bot');
+        input.value = "";
+      }, 400);
+    }
+
+    function adicionarMensagem(texto, tipo) {
+      const chat = document.getElementById("chat");
+      const msg = document.createElement("div");
+      msg.className = `mensagem ${tipo}`;
+      msg.textContent = texto;
+      chat.appendChild(msg);
+      chat.scrollTop = chat.scrollHeight;
+    }
+  </script>
+</body>
+</html>
