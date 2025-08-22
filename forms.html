@@ -1,1 +1,866 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Propostas Comerciais CEAP</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f1f5f9;
+      margin: 0;
+      padding: 0;
+    }
 
+    header {
+      background-color: #2563eb;
+      color: white;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem 2.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    .section-title {
+      color: #2563eb;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-row > div {
+      flex: 1;
+      min-width: 240px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-weight: 600;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 0.65rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .radio-group {
+      display: flex;
+      gap: 1.2rem;
+      align-items: center;
+      margin-top: 0.4rem;
+    }
+
+    .btn-container {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .btn {
+      background-color: #2563eb;
+      color: white;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #1e40af;
+    }
+
+    table {
+      width: 100%;
+      margin-top: 1rem;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #e2e8f0;
+      padding: 0.75rem;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f8fafc;
+    }
+
+    .voltar {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  background-color: #f9fafb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.voltar:hover {
+  transform: scale(1.08);
+  background-color: #ef4444;
+  color: white;
+}
+
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f1f5f9;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #2563eb;
+      color: white;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem 2.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+    .section-title {
+      color: #2563eb;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+    }
+    .form-row {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+    .form-row > div {
+      flex: 1;
+      min-width: 240px;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-weight: 600;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.65rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    textarea {
+      resize: vertical;
+    }
+    .radio-group {
+      display: flex;
+      gap: 1.2rem;
+      align-items: center;
+      margin-top: 0.4rem;
+    }
+    .btn-container {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .btn {
+      background-color: #2563eb;
+      color: white;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #1e40af;
+    }
+    table {
+      width: 100%;
+      margin-top: 1rem;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #e2e8f0;
+      padding: 0.75rem;
+      text-align: left;
+    }
+    th {
+      background-color: #f8fafc;
+    }
+    .voltar {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 500;
+      background-color: #f9fafb;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+    .voltar:hover {
+      transform: scale(1.08);
+      background-color: #ef4444;
+      color: white;
+    }
+    .overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+    .modal {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding: 2rem;
+      width: 360px;
+      text-align: center;
+    }
+    .icon-wrapper {
+      background: #eef2ff;
+      color: #6366f1;
+      width: 48px;
+      height: 48px;
+      border-radius: 999px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 1rem auto;
+    }
+    .icon-wrapper::before {
+      content: "\2713";
+      font-size: 24px;
+    }
+    .info-box {
+      background: #eef2ff;
+      border-left: 4px solid #6366f1;
+      padding: 1rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      text-align: left;
+      margin-bottom: 1.5rem;
+    }
+    .info-box ul {
+  margin: 0.5rem 0 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.info-box ul li {
+  margin: 0.4rem 0;
+  padding: 0.4rem 0.8rem;
+  background: #e0e7ff;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: #1e293b;
+}
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .btn-cancel, .btn-confirm {
+      border: none;
+      padding: 0.7rem 1.2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      flex: 1;
+      font-size: 1rem;
+    }
+    .btn-cancel {
+      background: #f3f4f6;
+      color: #374151;
+    }
+    .btn-confirm {
+      background: #4f46e5;
+      color: white;
+    }
+    .btn-confirm:hover {
+      background: #4338ca;
+    }
+
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f1f5f9;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #2563eb;
+      color: white;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem 2.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+    .section-title {
+      color: #2563eb;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+    }
+    .form-row {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+    .form-row > div {
+      flex: 1;
+      min-width: 240px;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-weight: 600;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.65rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    textarea {
+      resize: vertical;
+    }
+    .radio-group {
+      display: flex;
+      gap: 1.2rem;
+      align-items: center;
+      margin-top: 0.4rem;
+    }
+    .btn-container {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .btn {
+      background-color: #2563eb;
+      color: white;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #1e40af;
+    }
+    table {
+      width: 100%;
+      margin-top: 1rem;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #e2e8f0;
+      padding: 0.75rem;
+      text-align: left;
+    }
+    th {
+      background-color: #f8fafc;
+    }
+    .voltar {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 500;
+      background-color: #f9fafb;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+    .voltar:hover {
+      transform: scale(1.08);
+      background-color: #ef4444;
+      color: white;
+    }
+    .overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+    .modal {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding: 2rem;
+      width: 360px;
+      text-align: center;
+    }
+    .icon-wrapper {
+      background: #eef2ff;
+      color: #6366f1;
+      width: 48px;
+      height: 48px;
+      border-radius: 999px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 1rem auto;
+    }
+    .icon-wrapper::before {
+      content: "✓";
+      font-size: 24px;
+    }
+    .info-box {
+      background: #eef2ff;
+      border-left: 4px solid #6366f1;
+      padding: 1rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      text-align: left;
+      margin-bottom: 1.5rem;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .btn-cancel, .btn-confirm {
+      border: none;
+      padding: 0.7rem 1.2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      flex: 1;
+      font-size: 1rem;
+    }
+    .btn-cancel {
+      background: #f3f4f6;
+      color: #374151;
+    }
+    .btn-confirm {
+      background: #4f46e5;
+      color: white;
+    }
+    .btn-confirm:hover {
+      background: #4338ca;
+    }
+
+
+  </style>
+  
+</head>
+<body>
+
+<header>Propostas Comerciais CEAP</header>
+
+<div class="container">
+  <div class="section-title">Nova Proposta</div>
+
+  <form id="propostaForm">
+    <div class="form-row">
+      <div>
+        <label>Instituição Parceira</label>
+        <input type="text" required>
+      </div>
+      <div>
+        <label>Nome do Parceiro</label>
+        <input type="text" required>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div>
+        <label>Email do Parceiro</label>
+        <input type="email" required>
+      </div>
+      <div>
+        <label>Validade da Proposta</label>
+        <input type="date" required>
+      </div>
+      <div>
+        <label>Duração da parceria</label>
+        <input type="text" placeholder="Ex: 3 meses, 1 ano" required>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div>
+        <label>Tipo de Proposta</label>
+        <select id="tipoProposta" onchange="mostrarCampos()" required>
+          <option value="">Selecione</option>
+          <option value="financeira">Financeira</option>
+          <option value="serviço">Serviços/Parceria</option>
+          <option value="ambos">Ambos</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="camposFinanceira" style="display: none;">
+      <div class="form-row">
+        <div>
+          <label>Pagamento</label>
+          <div class="radio-group">
+            <label><input type="radio" name="pagamento" value="avista" onclick="mostrarParcelamento(false)"> À Vista</label>
+            <label><input type="radio" name="pagamento" value="parcelado" onclick="mostrarParcelamento(true)"> Parcelado</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div id="campoAvista">
+          <label>Valor Total (À Vista)</label>
+          <input type="number" step="0.01">
+        </div>
+        <div id="campoParcelado">
+          <label>Valor Total (Parcelado)</label>
+          <input type="number" step="0.01" id="valorParceladoTotal">
+        </div>
+      </div>
+      <div id="parcelamentoExtra" style="display: none;" class="form-row">
+        <div>
+          <label>Número de Parcelas</label>
+          <input type="number" id="numParcelas" min="1">
+        </div>
+        <div>
+          <label>Valor de Cada Parcela</label>
+          <input type="number" step="0.01" id="valorParcela">
+        </div>
+      </div>
+    </div>
+
+    <div id="camposParceria" style="display: none;"></div>
+
+    <div id="camposComuns" style="display: none;">
+      <div class="form-row">
+        <div>
+          <label>Descrição da Proposta</label>
+          <textarea rows="3"></textarea>
+        </div>
+        <div>
+          <label>Objetivo da Proposta</label>
+          <textarea rows="3"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="btn-container">
+      <button class="btn" type="submit">Gerar Proposta</button>
+    </div>
+  </form>
+</div>
+
+<div class="container">
+  <div class="section-title">Histórico de Propostas</div>
+  <table>
+    <thead>
+      <tr>
+        <th>Data</th>
+        <th>Empresa</th>
+        <th>Contato</th>
+        <th>Tipo</th>
+        <th>Status</th>
+        <th>Ações</th>
+
+      </tr>
+    </thead>
+    <tbody id="tabelaHistorico">
+      <tr><td colspan="6">Nenhuma proposta cadastrada.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<button onclick="window.location.href='home.html'" class="voltar">&#8592; Voltar</button>
+
+
+
+
+<div class="overlay" id="modalConfirmacao">
+  <div class="modal">
+    <div class="icon-wrapper"></div>
+    <h2>Confirmar Geração de Proposta</h2>
+    <p>Você está prestes a gerar uma proposta personalizada.</p>
+
+    <div class="info-box">
+      <ul>
+        <li>💡 Página web exclusiva será criada automaticamente.</li>
+        <li>📄 PDF personalizado com os detalhes da proposta será gerado.</li>
+      </ul>
+    </div>
+
+    <div class="buttons">
+      <button class="btn-cancel" onclick="fecharModal()">Cancelar</button>
+      <button class="btn-confirm" onclick="confirmarGeracao()">✔ Confirmar</button>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+
+
+ function abrirModal() {
+  const form = document.getElementById("propostaForm");
+  const textareas = form.querySelectorAll("textarea");
+
+  const instituicao = form.querySelector('input[type="text"]').value;
+  const nome = form.querySelectorAll('input[type="text"]')[1].value;
+  const email = form.querySelector('input[type="email"]').value;
+  const validade = form.querySelector('input[type="date"]').value;
+  const duracao = form.querySelectorAll('input[type="text"]')[2].value;
+  const tipo = document.getElementById("tipoProposta").value;
+  const pagamento = form.querySelector('input[name="pagamento"]:checked')?.value || '';
+  const valorAvista = form.querySelectorAll('input[type="number"]')[0]?.value || '';
+  const valorParcelado = document.getElementById("valorParceladoTotal")?.value || '';
+  const parcelas = document.getElementById("numParcelas")?.value || '';
+  const valorParcela = document.getElementById("valorParcela")?.value || '';
+  const descricao = textareas[0]?.value || '';
+  const objetivo = textareas[1]?.value || '';
+
+  const resumoHTML = `
+    <ul>
+      <li><strong>Instituição:</strong> ${instituicao}</li>
+      <li><strong>Nome:</strong> ${nome}</li>
+      <li><strong>Email:</strong> ${email}</li>
+      <li><strong>Validade:</strong> ${validade}</li>
+      <li><strong>Duração:</strong> ${duracao}</li>
+      <li><strong>Tipo:</strong> ${tipo}</li>
+      ${pagamento ? `<li><strong>Pagamento:</strong> ${pagamento === 'avista' ? 'À vista' : 'Parcelado'}</li>` : ''}
+      ${pagamento === 'avista' && valorAvista ? `<li><strong>Valor à vista:</strong> R$ ${valorAvista}</li>` : ''}
+      ${pagamento === 'parcelado' && valorParcelado ? `
+        <li><strong>Valor parcelado:</strong> R$ ${valorParcelado}</li>
+        <li><strong>Nº Parcelas:</strong> ${parcelas}</li>
+        <li><strong>Valor Parcela:</strong> R$ ${valorParcela}</li>
+      ` : ''}
+      ${descricao ? `<li><strong>Descrição:</strong> ${descricao}</li>` : ''}
+      ${objetivo ? `<li><strong>Objetivo:</strong> ${objetivo}</li>` : ''}
+    </ul>
+  `;
+
+  document.getElementById("resumoProposta").innerHTML = resumoHTML;
+  document.getElementById("modalConfirmacao").style.display = "flex";
+}
+  function fecharModal() {
+    document.getElementById('modalConfirmacao').style.display = 'none';
+  }
+  function confirmarGeracao() {
+    fecharModal();
+    document.getElementById('propostaForm').requestSubmit();
+  }
+ 
+  document.querySelector(".btn").addEventListener("click", function(e) {
+    e.preventDefault();
+    abrirModal();
+  });
+
+
+
+  function mostrarCampos() {
+    const tipo = document.getElementById("tipoProposta").value;
+    document.getElementById("camposFinanceira").style.display = (tipo === "financeira" || tipo === "ambos") ? "block" : "none";
+    document.getElementById("camposParceria").style.display = (tipo === "serviço" || tipo === "ambos") ? "block" : "none";
+    document.getElementById("camposComuns").style.display = tipo ? "block" : "none";
+  }
+
+  function mostrarParcelamento(ativo) {
+    document.getElementById("parcelamentoExtra").style.display = ativo ? "flex" : "none";
+    document.getElementById("campoAvista").style.display = ativo ? "none" : "block";
+    document.getElementById("campoParcelado").style.display = ativo ? "block" : "none";
+  }
+
+  function calcularParcela() {
+    const total = parseFloat(document.getElementById("valorParceladoTotal").value);
+    const parcelas = parseInt(document.getElementById("numParcelas").value);
+    const campoParcela = document.getElementById("valorParcela");
+
+    if (!isNaN(total) && !isNaN(parcelas) && parcelas > 0) {
+      campoParcela.value = (total / parcelas).toFixed(2);
+    } else {
+      campoParcela.value = "";
+    }
+  }
+
+  document.getElementById("valorParceladoTotal").addEventListener("input", calcularParcela);
+  document.getElementById("numParcelas").addEventListener("input", calcularParcela);
+
+  document.getElementById("propostaForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const textareas = form.querySelectorAll('textarea');
+    const data = {
+      instituicao: form.querySelector('input[type="text"]').value,
+      nome: form.querySelectorAll('input[type="text"]')[1].value,
+      email: form.querySelector('input[type="email"]').value,
+      validade: form.querySelector('input[type="date"]').value,
+      duracao: form.querySelectorAll('input[type="text"]')[2].value,
+      tipo: document.getElementById("tipoProposta").value,
+      pagamento: form.querySelector('input[name="pagamento"]:checked')?.value || '',
+      valorAvista: form.querySelectorAll('input[type="number"]')[0]?.value || '',
+      valorParcelado: document.getElementById("valorParceladoTotal")?.value || '',
+      parcelas: document.getElementById("numParcelas")?.value || '',
+      valorParcela: document.getElementById("valorParcela")?.value || '',
+      descricao: textareas[0]?.value || '',
+      objetivo: textareas[1]?.value || ''
+    };
+
+    const query = new URLSearchParams(data).toString();
+    window.open(`proposta2.html?${query}&autoPDF=1`, '_blank');
+
+  });
+
+
+  function abrirModal() {
+    document.getElementById('modalConfirmacao').style.display = 'flex';
+  }
+
+  function fecharModal() {
+    document.getElementById('modalConfirmacao').style.display = 'none';
+  }
+
+ function confirmarGeracao() {
+  fecharModal();
+
+  const form = document.getElementById('propostaForm');
+  const textareas = form.querySelectorAll('textarea');
+  const data = {
+    instituicao: form.querySelector('input[type="text"]').value,
+    nome: form.querySelectorAll('input[type="text"]')[1].value,
+    email: form.querySelector('input[type="email"]').value,
+    validade: form.querySelector('input[type="date"]').value,
+    duracao: form.querySelectorAll('input[type="text"]')[2].value,
+    tipo: document.getElementById("tipoProposta").value,
+    pagamento: form.querySelector('input[name="pagamento"]:checked')?.value || '',
+    valorAvista: form.querySelectorAll('input[type="number"]')[0]?.value || '',
+    valorParcelado: document.getElementById("valorParceladoTotal")?.value || '',
+    parcelas: document.getElementById("numParcelas")?.value || '',
+    valorParcela: document.getElementById("valorParcela")?.value || '',
+    descricao: textareas[0]?.value || '',
+    objetivo: textareas[1]?.value || ''
+  };
+
+  const query = new URLSearchParams(data).toString();
+  const hoje = new Date().toLocaleDateString();
+
+  const novaProposta = {
+    data: hoje,
+    instituicao: data.instituicao,
+    nome: data.nome,
+    email: data.email,
+    tipo: data.tipo,
+    status: "Pendente",
+    query
+  };
+
+  const historico = JSON.parse(localStorage.getItem("propostasCEAP")) || [];
+  historico.unshift(novaProposta);
+  localStorage.setItem("propostasCEAP", JSON.stringify(historico));
+
+  atualizarHistorico();
+  window.open(`proposta2.html?${query}&autoPDF=1`, '_blank');
+
+}
+
+  function verProposta(query) {
+    window.open(`proposta2.html?${query}&autoPDF=1`, '_blank');
+
+  }
+
+  function excluirProposta(index) {
+    const historico = JSON.parse(localStorage.getItem("propostasCEAP")) || [];
+    historico.splice(index, 1);
+    localStorage.setItem("propostasCEAP", JSON.stringify(historico));
+    atualizarHistorico();
+  }
+
+  function atualizarHistorico() {
+    const historico = JSON.parse(localStorage.getItem("propostasCEAP")) || [];
+    const tbody = document.getElementById("tabelaHistorico");
+    tbody.innerHTML = "";
+
+    if (historico.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="6">Nenhuma proposta cadastrada.</td></tr>';
+      return;
+    }
+
+    historico.forEach((item, index) => {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+  <td>${item.data}</td>
+  <td>${item.instituicao}</td>
+  <td>${item.email}</td>
+  <td>${item.tipo}</td>
+  <td>${item.status || 'Pendente'}</td>
+  <td>
+    <button onclick="verProposta('${item.query}')">Visualizar</button>
+    <button onclick="excluirProposta(${index})" style="color:red">Excluir</button>
+  </td>
+`;
+
+      tbody.appendChild(tr);
+    });
+  }
+
+  window.onload = atualizarHistorico;
+
+
+
+</script>
+
+</body>
+</html>
