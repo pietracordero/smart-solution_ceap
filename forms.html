@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <title>Propostas Comerciais CEAP</title>
   <style>
+    .popup {
+    position: fixed; top: 20px; left: 50%;
+    transform: translateX(-50%); background-color: #28a745;
+    color: white; padding: 15px 30px; border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 1000;
+}
+.popup.hidden { display: none; }
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: #f1f5f9;
@@ -862,5 +869,8 @@
 
 </script>
 
+<div id="popup-sucesso" class="popup hidden">
+    <p>✅ Proposta enviada com sucesso e salva no histórico!</p>
+</div>
 </body>
 </html>
