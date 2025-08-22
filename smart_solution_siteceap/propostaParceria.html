@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Proposta de Parceria de Serviços</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f1f5f9;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 840px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 2.5rem;
+      border-radius: 14px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    }
+
+    h1 {
+      text-align: center;
+      color: #1e293b;
+      font-size: 1.9rem;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #64748b;
+      margin-bottom: 1.5rem;
+    }
+
+    .alerta {
+      background-color: #fef3c7;
+      border-left: 5px solid #f59e0b;
+      padding: 1rem;
+      border-radius: 8px;
+      color: #92400e;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .titulo-bloco {
+      background-color: #2563eb;
+      color: white;
+      padding: 1rem 1.25rem;
+      border-radius: 8px 8px 0 0;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .bloco-dados {
+      display: flex;
+      justify-content: space-between;
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-top: none;
+      padding: 1.2rem 1.5rem;
+      border-radius: 0 0 8px 8px;
+      margin-bottom: 1.5rem;
+    }
+
+    .info-box {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .info-box .icon-circle {
+      background-color: #e2e8f0;
+      color: #2563eb;
+      font-size: 1.2rem;
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+
+    .info-box span {
+      font-size: 0.9rem;
+      color: #475569;
+    }
+
+    .info-box strong {
+      display: block;
+      font-size: 1.1rem;
+      color: #0f172a;
+    }
+
+    .card {
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin-bottom: 1.5rem;
+    }
+
+    .verde {
+      background: linear-gradient(to right, #ecfdf5, #d1fae5);
+      border-left: 4px solid #10b981;
+    }
+
+    .roxo {
+      background: linear-gradient(to right, #ede9fe, #e0e7ff);
+      border-left: 4px solid #7c3aed;
+    }
+
+    .card-title {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #1e293b;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-title .icon-circle {
+      background-color: #e2e8f0;
+      color: #2563eb;
+      font-size: 1.2rem;
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+
+    .card p {
+      margin: 0;
+      color: #334155;
+      font-size: 0.95rem;
+    }
+
+    .card.verde p,
+    .card.roxo p {
+      font-weight: bold;
+    }
+
+    .actions {
+      text-align: center;
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .btn {
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .btn-primary {
+      background-color: #22c55e;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: #15803d;
+    }
+
+    .btn-outline {
+      background-color: white;
+      border: 2px solid #2563eb;
+      color: #2563eb;
+    }
+
+    .btn-outline:hover {
+      background-color: #2563eb;
+      color: white;
+    }
+
+    .info-final {
+      background: #ffffff;
+      margin-top: 3rem;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .info-final h2 {
+      font-size: 1.3rem;
+      color: #1e293b;
+      margin-bottom: 1.5rem;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .info-item .icon-circle {
+      background-color: #e2e8f0;
+      color: #2563eb;
+      font-size: 1.2rem;
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+
+    .info-item strong {
+      color: #0f172a;
+      font-size: 1rem;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    .info-item p {
+      font-size: 0.95rem;
+      color: #475569;
+      margin: 0.25rem 0;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Proposta de Parceria de Serviços</h1>
+  <div class="subtitle">Juntos podemos transformar a educação através de serviços e conhecimentos compartilhados</div>
+
+  <div class="alerta">
+    <strong>Proposta válida até: <span id="validade-topo">--/--/----</span></strong><br>
+    Esta proposta expira em breve. Entre em contato para garantir os termos atuais.
+  </div>
+
+  <div class="titulo-bloco">Proposta de Parceria de Serviços</div>
+  <div class="bloco-dados">
+    <div class="info-box">
+      <div class="icon-circle">⏳</div>
+      <div>
+        <span>Duração da Parceria</span>
+        <strong id="duracao">--</strong>
+      </div>
+    </div>
+    <div class="info-box">
+      <div class="icon-circle">📅</div>
+      <div>
+        <span>Validade da Proposta</span>
+        <strong id="validade">--/--/----</strong>
+      </div>
+    </div>
+  </div>
+
+  <div class="card verde">
+    <div class="card-title"><div class="icon-circle">📄</div>Descrição da Parceria</div>
+    <p id="descricao">...</p>
+  </div>
+
+  <div class="card roxo">
+    <div class="card-title"><div class="icon-circle">🎯</div>Objetivo da Parceria</div>
+    <p id="objetivo">...</p>
+  </div>
+
+  <div class="actions">
+    <button class="btn btn-primary">✔ Aceitar Proposta</button>
+    <button class="btn btn-outline">📅 Agendar Reunião</button>
+  </div>
+
+  <div class="info-final">
+    <h2>Informações Importantes</h2>
+    <div class="info-item">
+      <div class="icon-circle">⚙️</div>
+      <div>
+        <strong>Responsabilidades</strong>
+        <p>Nossa organização será responsável pela execução dos serviços descritos, incluindo o fornecimento de profissionais qualificados e materiais necessários.</p>
+        <p>A instituição parceira deverá disponibilizar espaço físico adequado e garantir a participação dos profissionais nos treinamentos.</p>
+      </div>
+    </div>
+    <div class="info-item">
+      <div class="icon-circle">📊</div>
+      <div>
+        <strong>Relatórios e Avaliação</strong>
+        <p>Serão fornecidos relatórios trimestrais detalhando o progresso da implementação e os resultados alcançados.</p>
+        <p>Ao final da parceria, será realizada uma avaliação completa do impacto do projeto.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+
+  console.log("Parâmetros recebidos:", params.toString());
+
+  const validade = params.get("validade") || "";
+  const duracao = params.get("duracao") || "12 meses";
+  const descricao = params.get("descricao") || "-";
+  const objetivo = params.get("objetivo") || "-";
+
+  function formatarDataBR(dataISO) {
+    if (!dataISO || !dataISO.includes("-")) return "--/--/----";
+    const [ano, mes, dia] = dataISO.split("-");
+    return `${dia}/${mes}/${ano}`;
+  }
+
+  const validadeBR = formatarDataBR(validade);
+
+  document.getElementById("validade").textContent = validadeBR;
+  document.getElementById("validade-topo").textContent = validadeBR;
+  document.getElementById("duracao").textContent = duracao;
+  document.getElementById("descricao").textContent = descricao;
+  document.getElementById("objetivo").textContent = objetivo;
+</script>
+
+</body>
+</html>
